@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario de Ropa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Inventario de Ropa</div>
+    <button id="btn-logout" class="btn secondary">Cerrar Sesión</button>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h1>Agregar / Editar Producto</h1>
+      <form id="producto-form" class="form-card">
+        <input type="hidden" id="producto-id" />
+        <label>
+          Nombre
+          <input type="text" id="nombre" placeholder="Ej. Camisa Polo" required />
+        </label>
+        <label>
+          Cantidad
+          <input type="number" id="cantidad" min="0" value="0" required />
+        </label>
+        <label>
+          Precio
+          <input type="number" id="precio" step="0.01" min="0" value="0.00" required />
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn">Guardar producto</button>
+          <button type="button" id="btn-cancel" class="btn secondary">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h1>Productos</h1>
+      <table class="table" id="productos-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="empty-state" class="empty-state">No hay productos registrados aún.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

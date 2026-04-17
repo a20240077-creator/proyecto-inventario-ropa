@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - Inventario de Ropa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-card">
+      <h1>Crear cuenta</h1>
+      <form id="register-form" class="form-card">
+        <label>
+          Correo eléctronico
+          <input type="email" id="email" placeholder="tu@correo.com" required />
+        </label>
+        <label>
+          Contraseña
+          <input type="password" id="password" placeholder="Contraseña" required />
+        </label>
+        <button type="submit" class="btn">Registrar</button>
+      </form>
+      <p class="small-text">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
