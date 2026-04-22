@@ -84,6 +84,21 @@ input[type='number'] {
   border: 1px solid var(--border);
   border-radius: 14px;
   background: #fafafa;
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  color-scheme: light;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  box-shadow: 0 0 0 1000px #fafafa inset;
 }
 
 .btn {
